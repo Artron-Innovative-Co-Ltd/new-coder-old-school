@@ -121,15 +121,15 @@ if (isElectron) {
                     click: () => $("#open-help").click()
                 },
                 { type: 'separator' },
-                {
+                /*{
                     label: 'Join Us on Facebook',
                     click: () => shell.openExternal('https://www.facebook.com/microblockide')
-                },
+                },*/
                 {
                     label: 'Report Issue',
-                    click: () => shell.openExternal('https://github.com/microBlock-IDE/microBlock-IDE/issues')
+                    click: () => shell.openExternal('https://artroninnovative.co.th')
                 },
-                { type: 'separator' },
+                /*{ type: 'separator' },
                 {
                     label: 'Check of Updates...',
                     click: () => checkUpdate()
@@ -137,7 +137,7 @@ if (isElectron) {
                 {
                     label: 'Download Last version',
                     click: () => shell.openExternal('https://github.com/microBlock-IDE/microBlock-IDE-offline/releases')
-                },
+                },*/
                 { type: 'separator' },
                 {
                     label: 'About',
@@ -145,7 +145,7 @@ if (isElectron) {
                         dialog.showMessageBox({
                             type: "info",
                             title: "About",
-                            message: `microBlock IDE offline version ${pjson.version}`
+                            message: `NewCoder (Old School) version ${pjson.version}`
                         });
                     }
                 },

@@ -604,9 +604,9 @@ $("#open-project").click(async () => {
 
 $("#open-help").click(() => {
     if (!isElectron) {
-        window.open("https://microblock.app/", "_blank");
+        window.open("https://artroninnovative.co.th/", "_blank");
     } else {
-        shell.openExternal("https://microblock.app/");
+        shell.openExternal("https://artroninnovative.co.th/");
     }
 });
 

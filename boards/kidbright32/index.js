@@ -524,21 +524,45 @@ KidBright32_config = {
                     ]
                 },
                 {
-                    name: "Control",
-                    icon: `/images/icon/process.png`,
+                    name: "Logic",
+                    icon: `../kidbright32/images/logic.png`,
                     color: "#fbbd5e",
                     blocks: [
+                        "controls_if",
                         {
                             xml: `
-                                <block type="controls_wait">
-                                    <value name="time">
-                                        <shadow type="math_number">
-                                            <field name="NUM">1</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
+                                    <block type="controls_if">
+                                        <mutation else="1"></mutation>
+                                    </block>
+                                `
                         },
+                        {
+                            xml: `
+                                    <block type="logic_compare">
+                                        <value name="A">
+                                            <shadow type="math_number">
+                                                <field name="NUM">5</field>
+                                            </shadow>
+                                        </value>
+                                        <field name="OP">EQ</field>
+                                        <value name="B">
+                                            <shadow type="math_number">
+                                                <field name="NUM">5</field>
+                                            </shadow>
+                                        </value>
+                                    </block>
+                                `
+                        },
+                        "logic_operation",
+                        "logic_negate",
+                        "logic_boolean",
+                    ]
+                },
+                {
+                    name: "Loop",
+                    icon: `../kidbright32/images/loop.png`,
+                    color: "#fbbd5e",
+                    blocks: [
                         "controls_forever",
                         {
                             xml: `
@@ -573,104 +597,99 @@ KidBright32_config = {
                                 </block>
                           `
                         },
-                        "controls_if",
-                        {
+                        "controls_whileUntil",
+                        /*{
                             xml: `
-                                <block type="controls_if">
-                                    <mutation else="1"></mutation>
+                                <block type="controls_flow_statements" disabled="true">
+                                    <field name="FLOW">BREAK</field>
                                 </block>
                             `
                         },
-                        "controls_wait_until",
-                        "controls_whileUntil",
+                        {
+                            xml: `
+                                <block type="controls_flow_statements">
+                                    <field name="FLOW">CONTINUE</field>
+                                </block>
+                          `
+                        },*/
                     ]
                 },
                 {
-                    name: "Operators",
-                    icon: `/images/icon/maths.png`,
-                    color: "#293939",
+                    name: "Math",
+                    icon: `../kidbright32/images/math.png`,
+                    color: "#fbbd5e",
                     blocks: [
                         {
-                            xml: '<label text="Math"></label>',
-                        },
-                        {
-                            xml: `
-                                <block type="math_number">
-                                    <field name="NUM">0</field>
-                                </block>
-                            `
-                        },
-                        {
                             xml: `
                                 <block type="math_arithmetic">
-                                    <value name="A">
-                                        <shadow type="math_number">
-                                            <field name="NUM">1</field>
-                                        </shadow>
-                                    </value>
                                     <field name="OP">ADD</field>
-                                    <value name="B">
-                                        <shadow type="math_number">
-                                            <field name="NUM">1</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="math_arithmetic">
                                     <value name="A">
                                         <shadow type="math_number">
                                             <field name="NUM">1</field>
                                         </shadow>
                                     </value>
+                                    <value name="B">
+                                        <shadow type="math_number">
+                                            <field name="NUM">10</field>
+                                        </shadow>
+                                    </value>
+                                </block>
+                          `
+                        },
+                        {
+                            xml: `
+                                <block type="math_arithmetic">
                                     <field name="OP">MINUS</field>
-                                    <value name="B">
-                                        <shadow type="math_number">
-                                            <field name="NUM">1</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="math_arithmetic">
                                     <value name="A">
                                         <shadow type="math_number">
                                             <field name="NUM">1</field>
                                         </shadow>
                                     </value>
+                                    <value name="B">
+                                        <shadow type="math_number">
+                                            <field name="NUM">10</field>
+                                        </shadow>
+                                    </value>
+                                </block>
+                          `
+                        },
+                        {
+                            xml: `
+                                <block type="math_arithmetic">
                                     <field name="OP">MULTIPLY</field>
-                                    <value name="B">
-                                        <shadow type="math_number">
-                                            <field name="NUM">1</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="math_arithmetic">
                                     <value name="A">
                                         <shadow type="math_number">
                                             <field name="NUM">1</field>
                                         </shadow>
                                     </value>
-                                    <field name="OP">DIVIDE</field>
                                     <value name="B">
+                                        <shadow type="math_number">
+                                            <field name="NUM">10</field>
+                                        </shadow>
+                                    </value>
+                                </block>
+                          `
+                        },
+                        {
+                            xml: `
+                                <block type="math_arithmetic">
+                                    <field name="OP">DIVIDE</field>
+                                    <value name="A">
                                         <shadow type="math_number">
                                             <field name="NUM">1</field>
                                         </shadow>
                                     </value>
+                                    <value name="B">
+                                        <shadow type="math_number">
+                                            <field name="NUM">10</field>
+                                        </shadow>
+                                    </value>
                                 </block>
-                            `
+                          `
                         },
                         {
                             xml: `
-                                <block type="math_modulo">
+                                <block type="math_random_int">
                                     <value name="DIVIDEND">
                                         <shadow type="math_number">
                                             <field name="NUM">10</field>
@@ -682,9 +701,11 @@ KidBright32_config = {
                                         </shadow>
                                     </value>
                                 </block>
-                            `
+                          `
                         },
-                        "random_seed",
+                        "math_single",
+                        "math_trig",
+                        "math_round",
                         {
                             xml: `
                                 <block type="math_random_int">
@@ -699,110 +720,18 @@ KidBright32_config = {
                                         </shadow>
                                     </value>
                                 </block>
-                            `
+                          `
                         },
                         {
                             xml: `
-                                <block type="math_trig">
-                                    <value name="NUM">
-                                        <shadow type="math_number">
-                                            <field name="NUM">45</field>
+                                <block type="math_number_property">
+                                    <value name="FROM">
+                                        <shadow type="NUMBER_TO_CHECK">
+                                            <field name="NUM">0</field>
                                         </shadow>
                                     </value>
                                 </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="math_round">
-                                    <field name="OP">ROUND</field>
-                                    <value name="NUM">
-                                    <shadow type="math_number">
-                                        <field name="NUM">3.1</field>
-                                    </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: '<label text="Logic"></label>',
-                        },
-                        {
-                            xml: `
-                                <block type="logic_boolean">
-                                    <field name="BOOL">TRUE</field>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="logic_compare">
-                                    <value name="A">
-                                        <shadow type="math_number">
-                                            <field name="NUM">5</field>
-                                        </shadow>
-                                    </value>
-                                    <field name="OP">GT</field>
-                                    <value name="B">
-                                        <shadow type="math_number">
-                                            <field name="NUM">5</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="logic_compare">
-                                    <value name="A">
-                                        <shadow type="math_number">
-                                            <field name="NUM">5</field>
-                                        </shadow>
-                                    </value>
-                                    <field name="OP">LT</field>
-                                    <value name="B">
-                                        <shadow type="math_number">
-                                            <field name="NUM">5</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="logic_compare">
-                                    <value name="A">
-                                        <shadow type="math_number">
-                                            <field name="NUM">5</field>
-                                        </shadow>
-                                    </value>
-                                    <field name="OP">EQ</field>
-                                    <value name="B">
-                                        <shadow type="math_number">
-                                            <field name="NUM">5</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        "logic_operation",
-                        "logic_negate",
-                        {
-                            xml: '<label text="Text"></label>',
-                        },
-                        "text",
-                        "text_join",
-                        {
-                            xml: `
-                                <block type="logic_compare">
-                                    <field name="OP">EQ</field>
-                                    <value name="B">
-                                        <shadow type="text">
-                                            <field name="TEXT">Hello!</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
+                          `
                         },
                     ]
                 },
