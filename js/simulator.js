@@ -56,10 +56,10 @@ let switchModeTo = (mode, firstTime) => {
     if (typeof board.simulator !== "undefined") {
         if (mode === MODE_REAL_DEVICE) {
             $("#switch-to-real-mode").css("display", "none");
-            $("#switch-to-sim-mode").css("display", "block");
+            $("#switch-to-sim-mode").css("display", "flex");
         } else if (mode === MODE_SIMULATOR) {
             $("#switch-to-sim-mode").css("display", "none");
-            $("#switch-to-real-mode").css("display", "block");
+            $("#switch-to-real-mode").css("display", "flex");
         }
     } else {
         $("#switch-to-real-mode").css("display", "none");

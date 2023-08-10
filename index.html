@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>microBlock IDE</title>
+        <title>NewCoder (old-school)</title>
         <meta name="description" content="Program a microcontroller with Block & MicroPython, Use without install and Free !">
         <meta name="theme-color" content="#F1C40F" />
         <link rel="icon" href="favicon.ico" sizes="64x64">
@@ -147,7 +147,7 @@
                         <button id="file-explorer-open-btn">
                             <i class="fas fa-bars"></i>
                         </button>
-                        <div class="header-logo animate__animated animate__bounceInLeft">microBlock</div>
+                        <div class="header-logo animate__animated animate__bounceInLeft">NewCoder</div>
                     </div>
                     <div class="center">
                         <ul class="switch-mode" id="mode-select-switch">
@@ -157,16 +157,16 @@
                     </div>
                     <div class="right">
                         <ul class="top-bar-button">
-                            <li><button id="switch-to-sim-mode" style="display: none;" data-tippy-content="Switch to Simulator Mode"><i class="fas fa-hat-wizard"></i></button></li>
+                            <li><button id="switch-to-sim-mode" style="display: none;" data-tippy-content="Switch to Simulator Mode"><img src="/images/icon/sim.png" /></button></li>
                             <li><button id="switch-to-real-mode" style="display: none;" data-tippy-content="Switch to Real Mode"><i class="fas fa-microchip"></i></button></li>
                             <li><button id="install-pwa" style="display: none;" onclick="installPWA()" data-tippy-content="Install microBlock to your PC"><i class="fas fa-download"></i></button></li>
-                            <li><button id="open-extension-dialog" data-tippy-content="Extension"><i class="fas fa-cubes"></i></button></li>
+                            <li><button id="open-extension-dialog" data-tippy-content="Extension"><img src="/images/icon/extension.png" /></button></li>
                             <li><button id="open-dashboard" data-tippy-content="Dashboard"><i class="fas fa-chart-line"></i></button></li>
-                            <li><button id="open-example-dialog" data-tippy-content="Examples"><i class="fas fa-book"></i></button></li>
+                            <li><button id="open-example-dialog" data-tippy-content="Examples"><img src="/images/icon/examples.png" /></button></li>
                             <li><button id="open-help" data-tippy-content="Help"><i class="fas fa-question"></i></button></li>
-                            <li><button id="github-signin" data-tippy-content="Sign in with GihHub"><i class="fab fa-github"></i></button></li>
+                            <li><button id="github-signin" data-tippy-content="Sign in with GihHub"><img src="/images/icon/github.png" /></button></li>
                             <li><img id="github_avatar" src="" alt="GitHub Avatar" data-tippy-content="Sign out GihHub"></li>
-                            <li><button id="code-share" data-tippy-content="Share Project"><i class="fas fa-share"></i></button></li>
+                            <!-- <li><button id="code-share" data-tippy-content="Share Project"><i class="fas fa-share"></i></button></li> -->
                         </ul>
                         <ul class="embed-only top-bar-button" style="display: none;">
                             <li><button id="embed-edit" data-tippy-content="Upload & Edit"><i class="fas fa-external-link-alt"></i></button></li>
@@ -197,20 +197,20 @@
                         <ul class="button-list left">
                             <li><button id="new-project" data-tippy-content="New project"><i class="far fa-file"></i></button></li>
                             <li><input type="text" id="project-name" value="myProject" placeholder="Project Name"></li>
-                            <li><button id="save-project" data-tippy-content="Save project"><i class="far fa-save"></i></button></li>
-                            <li><button id="open-project" data-tippy-content="Open project"><i class="far fa-folder-open"></i></button></li>
+                            <li><button id="save-project" data-tippy-content="Save project"><img src="/images/icon/save.png" /></button></li>
+                            <li><button id="open-project" data-tippy-content="Open project"><img src="/images/icon/open.png" /></button></li>
                             <li><button id="open-github-dialog" data-tippy-content="GitHub Manager"><i class="fab fa-github"></i></button></li>
                         </ul>
                         <ul class="button-list center">
                             <li>
                                 <button id="upload-program" data-tippy-content="Upload" class="zoom">
-                                    <div><i class="fas fa-upload"></i></div>
+                                    <div><img src="/images/icon/upload.png" /></div>
                                 </button>
                             </li>
                         </ul>
                         <ul class="button-list right">
-                            <li><button id="open-note" data-tippy-content="Open Note"><i class="fas fa-sticky-note"></i></button>
-                            <li><button id="open-terminal" data-tippy-content="Open Terminal"><i class="fas fa-terminal"></i></button></li>
+                            <li><button id="open-note" data-tippy-content="Open Note"><img src="/images/icon/note.png" /></button>
+                            <li><button id="open-terminal" data-tippy-content="Open Terminal"><img src="/images/icon/terminal.png" /></button></li>
                         </ul>
                     </div>
                     <div class="status-bar">
