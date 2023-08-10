@@ -1,8 +1,6 @@
-# microBlock IDE
+# NewCoder Old School
 
 Program a microcontroller with Block &amp; MicroPython. Support KidBright32 family, OpenKB, IPST-WiFi and TTGO T-Display
-
-<img src="https://i.ibb.co/R3BypWc/micro-Block-IDE-V2-2-0.png" alt="microBlock IDE V2.2.0" border="0">
 
 ## Future
 
