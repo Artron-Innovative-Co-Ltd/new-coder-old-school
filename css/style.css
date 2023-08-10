@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Inria Sans';
     color: #194C66;
     user-select: none;
 }
@@ -285,14 +285,14 @@ ul.switch-mode > li:last-child {
 
 .blocklyTreeRowContentContainer > .blocklyTreeLabel {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     padding: 6px 0;
     padding-bottom: 10px;
     padding-top: 0;
     border-bottom: 2px solid #194C66;
     margin-left: 8px;
     margin-right: 8px;
-    font-weight: bold;
+    font-family: 'Inria Sans';
 }
 
 #blocks-editor > .work-box {
@@ -514,7 +514,7 @@ ul.switch-mode > li:last-child {
     position: absolute;
     width: 6px;
     height: 100%;
-    background-color: #424949;
+    background-color: #4b7894;
     cursor: col-resize;
     top: 0;
     right: 0;
@@ -533,7 +533,7 @@ ul.switch-mode > li:last-child {
 }
 
 #terminal > header {
-    background-color: #7F8C8D;
+    background-color: #4b7894;
     position: relative;
     width: 100%;
 }
@@ -561,12 +561,12 @@ ul.switch-mode > li:last-child {
     height: 36px;
     font-size: 16px;
     outline: none;
-    color: #FFF;
-    background-color: #616A6B;
+    color: #4b7894;
+    background-color: #FFF;
 }
 
 #terminal > header > .icon > button:hover {
-    background-color: #515A5A;
+    background-color: #e4e4e4;
 }
 
 #terminal > header > .icon > button > i {
@@ -1675,7 +1675,7 @@ ul.switch-mode > li:last-child {
 
 #firmware-upgrade-dialog  > section > section > article .close-btn {
     background-color: #FFF;
-    color: #424949;
+    color: #4b7894;
 }
 
 #firmware-upgrade-dialog  > section > section > article .close-btn:hover {
@@ -1964,13 +1964,19 @@ ul.switch-mode > li:last-child {
 }
 
 #file-explorer-open-btn:hover {
-    background-color: #D4AC0D;
+    background-color: #FFF;
+    color: #194C66;
 }
 
 #file-explorer-open-btn > i {
     font-size: 22px;
     color: #FFF;
 }
+
+#file-explorer-open-btn:hover > i {
+    color: #194C66;
+}
+
 
 #file-explorer-dialog {
     position: absolute;
@@ -2096,4 +2102,21 @@ ul.switch-mode > li:last-child {
 #file-explorer-dialog > article ul > li > button.delete-btn:hover > i {
     color: #CB4335;
     cursor: pointer;
+}
+
+.tippy-arrow {
+    display: none;
+}
+
+.tippy-content {
+    background-color: #FFF;
+    color: #4b7894;
+    border-radius: 12px;
+    border: 2px solid #4b7894;
+    padding: 2px 8px;
+    font-size: 16px;
+}
+
+.tippy-box {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
