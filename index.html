@@ -600,6 +600,27 @@
             </article>
         </section>
 
+        <section id="sign-in">
+            <div class="box">
+                <div class="logo">
+                    <img src="images/new-coder-sign-in-logo.svg" alt="" />
+                </div>
+                <div class="form-box">
+                    <div>
+                        <img src="images/user-icon.svg" alt="" />
+                    </div>
+                    <div id="sign-in-error-box">Username or Password wrong</div>
+                    <input type="text" placeholder="Username" id="sign-in-username" />
+                    <input type="password" placeholder="Password" id="sign-in-password" />
+                    <label class="container">Remember Me
+                        <input type="checkbox" id="sign-in-remember" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <button class="sign-in-submit-btn">Sign In</button>
+                </div>
+            </div>
+        </section>
+
         <script>var require = { paths: { 'vs': 'monaco-editor/min/vs' } };</script>
         <script src="monaco-editor/min/vs/loader.js"></script>
 	    <script src="monaco-editor/min/vs/editor/editor.main.nls.js"></script>
@@ -649,5 +670,7 @@
         <script src="js/install.js"></script>
 
         <script src="js/app.js"></script>
+        <script src="backend/users.js"></script>
+        <script src="js/auth.js"></script>
     </body>
 </html>
