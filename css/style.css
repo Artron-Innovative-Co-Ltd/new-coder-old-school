@@ -93,6 +93,7 @@ body {
     padding: 20px 30px;
     display: flex;
     align-items: center;
+    padding-left: 15px;
 }
 
 .header-logo > img {
@@ -1960,7 +1961,7 @@ ul.switch-mode > li:last-child {
 }
 
 #file-explorer-open-btn {
-    position: absolute;
+    /* position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -1971,7 +1972,8 @@ ul.switch-mode > li:last-child {
     cursor: pointer;
     z-index: 9999;
     outline: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0; */
+    padding: 10px;
 }
 
 #file-explorer-open-btn:hover {
