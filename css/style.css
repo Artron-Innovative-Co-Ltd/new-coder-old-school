@@ -81,6 +81,12 @@ body {
 
 }
 
+.page > .main > header > .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .header-logo {
     font-size: 24px;
     color: #FFF;
@@ -145,6 +151,10 @@ ul.switch-mode.small {
 ul.switch-mode.small > li {
     padding: 6px 10px;
     font-size: 14px;
+}
+
+ul.left-button-box {
+    margin-left: 30px !important;
 }
 
 ul.top-bar-button {
@@ -685,7 +695,7 @@ ul.switch-mode > li:last-child {
 }
 
 .dialog > header > .icon > button:hover {
-    background-color: #D4AC0D;
+    background-color: #F2D388;
 }
 
 .dialog > section {
@@ -786,7 +796,7 @@ ul.switch-mode > li:last-child {
 }
 
 .add-extension-box button:hover {
-    background-color: #D4AC0D;
+    background-color: #F2D388;
 }
 
 .add-extension-box button[type="reset"] {
@@ -813,7 +823,7 @@ ul.switch-mode > li:last-child {
 }
 
 #extension-keyword:focus {
-    border: 2px solid #D4AC0D;
+    border: 2px solid #F2D388;
     width: 200px;
 }
 
@@ -1188,7 +1198,7 @@ ul.switch-mode > li:last-child {
 }
 
 #github-dialog > section > section .control-button > button:hover {
-    background-color: #D4AC0D;
+    background-color: #F2D388;
 }
 
 #github-dialog-open {
@@ -1284,7 +1294,7 @@ ul.switch-mode > li:last-child {
 }
 
 #port-select-dialog > section > section > .control-button > button:hover {
-    background-color: #D4AC0D;
+    background-color: #F2D388;
 }
 
 #project-create-dialog {
@@ -1378,7 +1388,7 @@ ul.switch-mode > li:last-child {
 }
 
 #project-create-dialog > section button:hover {
-    background-color: #D4AC0D;
+    background-color: #F2D388;
 }
 
 
@@ -1583,7 +1593,7 @@ ul.switch-mode > li:last-child {
 }
 
 #firmware-upgrade-dialog  > section > section > article button:hover {
-    background-color: #D4AC0D;
+    background-color: #F2D388;
 }
 
 #firmware-upgrade-dialog  > section > section > article button:disabled {

@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Inria Sans';
-    src: url('InriaSans-Regular.woff2') format('woff2'),
-        url('InriaSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
