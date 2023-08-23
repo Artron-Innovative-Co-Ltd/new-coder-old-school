@@ -20,7 +20,7 @@ addBoard({
         "../ipst-wifi/blocks/blocks_switch.js",
         "blocks/blocks_ir.js",
         "blocks/blocks_pin.js",
-        "../kidbright32/blocks/blocks_buzzer.js",
+        "blocks/blocks_buzzer.js",
         "blocks/blocks_servo.js",
         "blocks/blocks_rgbled.js",
         "../kidbright32/blocks/blocks_advanced.js",
@@ -32,7 +32,7 @@ addBoard({
         "../ipst-wifi/blocks/generators_switch.js",
         "blocks/generators_ir.js",
         "../kidbright32/blocks/generators_pin.js",
-        "../kidbright32/blocks/generators_buzzer.js",
+        "blocks/generators_buzzer.js",
         "../kidbright32/blocks/generators_servo.js",
         "blocks/generators_rgbled.js",
         "../kidbright32/blocks/generators_avanced.js",
@@ -239,12 +239,7 @@ addBoard({
                         },
                         {
                             xml: `
-                                <block type="buzzer_tone">
-                                    <value name="freq">
-                                        <shadow type="math_number">
-                                            <field name="NUM">2000</field>
-                                        </shadow>
-                                    </value>
+                                <block type="buzzer_beep_duration">
                                     <value name="duration">
                                         <shadow type="math_number">
                                             <field name="NUM">1</field>
@@ -253,29 +248,8 @@ addBoard({
                                 </block>
                             `
                         },
-                        {
-                            xml: `
-                                <block type="buzzer_notes">
-                                    <value name="notes">
-                                        <block type="make_note">
-                                            <field name="notes">C5</field>
-                                        </block>
-                                    </value>
-                                    <field name="duration">1 / 2</field>
-                                </block>
-                            `
-                        },
-                        {
-                            xml: `
-                                <block type="buzzer_volume">
-                                    <value name="level">
-                                        <shadow type="math_number">
-                                            <field name="NUM">50</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
+                        "buzzer_beep_on",
+                        "buzzer_beep_off",
                         {
                             xml: '<label text="RGBLED"></label>',
                         },

@@ -193,7 +193,11 @@ class FieldBitmap extends Blockly.Field {
       input.accept = "image/png, image/jpeg";
       input.addEventListener("change", function(e) {
         if (e.target.files.length > 0) {
-          this.fileChoose_ = e.target.files[0].path;
+          if (isElectron) {
+            this.fileChoose_ = e.target.files[0].path;
+          } else {
+            this.fileChoose_ = URL.createObjectURL(e.target.files[0]);
+          }
           for (let e of this.editor_.querySelectorAll(".control > div")) {
             e.style.display = "block";
           }
@@ -348,12 +352,16 @@ class FieldBitmap extends Blockly.Field {
 
   toXml(fieldElement) {
     fieldElement.textContent = this.value_;
-    fieldElement.setAttribute("file", this.fileChoose_ || "");
+    if (isElectron) {
+      fieldElement.setAttribute("file", this.fileChoose_ || "");
+    }
     return fieldElement;
   }
 
   fromXml(fieldElement) {
-    this.fileChoose_ = fieldElement.getAttribute("file") || "";
+    if (isElectron) {
+      this.fileChoose_ = fieldElement.getAttribute("file") || "";
+    }
     this.setValue(fieldElement.textContent);
   }
 

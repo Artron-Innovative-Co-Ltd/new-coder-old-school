@@ -1,0 +1,14 @@
+{
+  "name": "new-coder-old-school",
+  "version": "1.0.0",
+  "description": "Program a microcontroller with Block &amp; MicroPython. Support KidBright32 family, OpenKB, IPST-WiFi and TTGO T-Display",
+  "main": "server.js",
+  "scripts": {
+    "server": "node ./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

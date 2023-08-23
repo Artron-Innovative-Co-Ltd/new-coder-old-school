@@ -42,7 +42,7 @@ Blockly.defineBlocksWithJsonArray([
       "options": [
         [
           "SW1",
-          "32"
+          "23"
         ]
       ]
     }
